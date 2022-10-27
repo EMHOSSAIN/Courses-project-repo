@@ -4,19 +4,19 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LeftSide = () => {
-    const [categoryes, setCategories]=useState ([])
+    const [categories, setCategories]=useState ([])
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/categories')
+        fetch('https://learning-server-vert.vercel.app/categories')
         .then(res=> res.json())
         .then(data=> setCategories(data))
     },[])
 
     return (
         <div>
-          <h4>Course Category : {categoryes.length}</h4>
+          <h4>Course Category : {categories.length}</h4>
             {
-                categoryes.map(category=> <p key={category.id} >
+                categories.map(category=> <p key={category.id} >
                     <Link to={`/category/${category.id}`}> {category.name} </Link>
 
                 </p>)

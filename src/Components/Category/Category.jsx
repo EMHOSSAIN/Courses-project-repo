@@ -1,13 +1,17 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
+
+
 const Category = () => {
-    const courses = useLoaderData();
-    console.log(courses)
+  const learnCourse = useLoaderData()
+  console.log(learnCourse)
+
+
     return (
-        <div>
-            <h1>this is  category page:{courses.length}  </h1>
-        </div>
+      <div>
+        <h1> {learnCourse.length} </h1>
+      </div>
     );
 };
 

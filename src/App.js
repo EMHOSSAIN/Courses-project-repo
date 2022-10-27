@@ -17,7 +17,7 @@ function App() {
         {
           path:'/home',
           element: <PrivateRouter><Home> </Home></PrivateRouter>,
-          loader:()=> fetch('http://localhost:5000/news')
+          loader:()=> fetch('https://learning-server-vert.vercel.app/news')
         },
         {
           path:'/blog',
@@ -34,7 +34,7 @@ function App() {
         {
           path:'/category/:id',
           element: <Category> </Category>,
-          loader:({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+          loader:({params}) => fetch(`https://learning-server-vert.vercel.app/${params.id}`),
         
         }
       ] 
