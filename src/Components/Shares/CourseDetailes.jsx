@@ -6,7 +6,7 @@ const CourseDetailes = ({course}) => {
 
     return (
         <Card className="text-center mb-3">
-       <Card.Title> {title} </Card.Title>
+       <Card.Title> <h2>{title}</h2> </Card.Title>
         <Card.Body>
         <Card.Img variant="top" src= {image_url} />
           <Card.Text>

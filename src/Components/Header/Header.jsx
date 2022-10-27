@@ -70,7 +70,7 @@ const Header = () => {
             <Button onClick={handlelogout} variant="primary">LogOut</Button>
             <h6 style={{color:'white', marginLeft:'10px', textAlign:'center'}} > {user?.displayName} </h6>
 
-            <Image style={{width:'30px',height:'50px', borderRadius:'40px', margin:'10px',marginLeft:'120px' }} src={user?.photoURL}/>
+            <Image style={{width:'30px',height:'50px', borderRadius:'40px', margin:'10px',marginLeft:'120px' }} title={user?.displayName} src={user?.photoURL}/>
            </>
             :
             <>
@@ -84,8 +84,8 @@ const Header = () => {
           </Nav>
         </Container>
        <div style={{marginRight:"50px", display:"flex"}}>
-       <Button onClick={handleLogingWithGoogle} className='me-5' > <FaGoogle/> </Button>
-      <Button onClick={ handleLogingWithgithub} > <FaGithub/> </Button>
+       <Button onClick={handleLogingWithGoogle}  className='me-5' title='SIGN WITH GOOGLE' > <FaGoogle/> </Button>
+      <Button onClick={ handleLogingWithgithub} title="SIGN WITH GITHUB" > <FaGithub/> </Button>
        </div>
       </Navbar>
      </>
