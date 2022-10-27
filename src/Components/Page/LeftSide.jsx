@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const LeftSide = () => {
     const [categories, setCategories]=useState ([])
+    console.log(categories[0])
 
     useEffect( ()=>{
         fetch('https://learning-server-vert.vercel.app/categories')

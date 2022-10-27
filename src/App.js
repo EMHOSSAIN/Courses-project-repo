@@ -34,7 +34,7 @@ function App() {
         {
           path:'/category/:id',
           element: <Category> </Category>,
-          loader:({params}) => fetch(`https://learning-server-vert.vercel.app/${params.id}`),
+          loader:({params}) => fetch(`https://learning-server-vert.vercel.app/category/0${params.id}`),
         
         }
       ] 

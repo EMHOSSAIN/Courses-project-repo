@@ -1,11 +1,20 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 const CourseDetailes = ({course}) => {
+    const {title,image_url,details} = course
 
     return (
-        <div>
-            {course.title}
-        </div>
+        <Card className="text-center mb-3">
+       <Card.Title> {title} </Card.Title>
+        <Card.Body>
+        <Card.Img variant="top" src= {image_url} />
+          <Card.Text>
+           {details}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer className="text-muted">2 days ago</Card.Footer>
+      </Card>
     );
 };
 
