@@ -9,7 +9,7 @@ const Main = () => {
        <Container>
         <Header></Header>
         <Row>
-            <Col lg='3' >
+            <Col style={{position:'sticky'}} lg='3' >
             <LeftSide> </LeftSide>
             </Col>
             

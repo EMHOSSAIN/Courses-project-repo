@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
@@ -9,7 +8,7 @@ const SignUp = () => {
   const navigate = useNavigate()
 
 
-    const {user,userupdateprofile,createUser}= useContext(AuthContext) 
+    const {userupdateprofile,createUser}= useContext(AuthContext) 
 
     const handleSubmit = event=>{
 
@@ -75,15 +74,15 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input name='email' type="email" placeholder="email" className="input input-bordered" />
+          <input name='email' type="email" placeholder="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input name='password' type="password" placeholder="password" className="input input-bordered" />
+          <input name='password' type="password" placeholder="password" className="input input-bordered" required />
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+           
           </label>
         </div>
         <div className="form-control mt-6">

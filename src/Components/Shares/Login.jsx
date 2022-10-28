@@ -3,10 +3,11 @@ import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
+
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
-  const {login} = useContext(AuthContext)
+    const {login} = useContext(AuthContext)
   const navigate = useNavigate()
 
   const handlelogin = event=>{
@@ -23,6 +24,8 @@ const Login = () => {
     })
     .catch(error =>{
       const errorMessage = error.message;
+      console.log(errorMessage)
+      
 
     })
 
@@ -35,7 +38,7 @@ const Login = () => {
         <Form onSubmit={ handlelogin} className='w-50 m-auto mt-5'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control name='email' type="email" placeholder="Enter email" />
+        <Form.Control name='email' type="email" placeholder="Enter email" required />
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
@@ -43,7 +46,7 @@ const Login = () => {
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control name='password' type="password" placeholder="Password" />
+        <Form.Control name='password' type="password" placeholder="Password" required />
       </Form.Group>
             <p>Don't have an account? Go <Link to='/signup'>SignUp</Link> </p>
       <Button variant="primary" type="submit">

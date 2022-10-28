@@ -1,5 +1,7 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const CourseDetailes = ({course}) => {
     const {title,image_url,details} = course
@@ -13,7 +15,7 @@ const CourseDetailes = ({course}) => {
            {details}
           </Card.Text>
         </Card.Body>
-        <Card.Footer className="text-muted">2 days ago</Card.Footer>
+        <Link  to = '/prenium'> <Button style={{width:'100%'}}> Get Premium </Button> </Link> 
       </Card>
     );
 };

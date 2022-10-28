@@ -7,6 +7,7 @@ import Login from './Components/Shares/Login';
 import SignUp from './Components/Shares/SignUp';
 import PrivateRouter from './Components/PrivateRouter/PrivateRouter';
 import Category from './Components/Category/Category';
+import Prenium from './Components/Prenium/Prenium';
 
 function App() {
   const router = createBrowserRouter([
@@ -36,6 +37,9 @@ function App() {
           element: <Category> </Category>,
           loader:({params}) => fetch(`https://learning-server-vert.vercel.app/category/0${params.id}`),
         
+        },{
+          path:'/prenium',
+          element: <PrivateRouter><Prenium> </Prenium></PrivateRouter>
         }
       ] 
     }
