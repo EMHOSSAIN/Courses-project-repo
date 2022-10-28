@@ -8,6 +8,8 @@ import SignUp from './Components/Shares/SignUp';
 import PrivateRouter from './Components/PrivateRouter/PrivateRouter';
 import Category from './Components/Category/Category';
 import Prenium from './Components/Prenium/Prenium';
+import NotFoundData from './Components/Error/NotFoundData';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -41,7 +43,12 @@ function App() {
           path:'/prenium',
           element: <PrivateRouter><Prenium> </Prenium></PrivateRouter>
         }
-      ] 
+      ], 
+      
+    },
+    {
+      path:'*',
+      element:<NotFoundData></NotFoundData>
     }
   ])
   return (
